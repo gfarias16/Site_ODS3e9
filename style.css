@@ -107,6 +107,10 @@ span{
     max-width: 900px;
 }
 .footer {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     text-align: center;
     background: rgba(8, 83, 14, 0.7);
     top: 100%;
