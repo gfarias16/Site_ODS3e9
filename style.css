@@ -51,6 +51,71 @@
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
+/* CONTÊINER DO DROPDOWN */
+.recolher {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* BOTÃO "CONTEÚDO" */
+.conteudo {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 200;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0; /* pra alinhar com os <a> */
+}
+
+/* TIRA O ESTILO DE BOTÃO FEIO NO HOVER/FOCUS */
+.conteudo:focus {
+    outline: none;
+}
+
+/* DROPDOWN EM SI (OS LINKS INTERNOS) */
+.recolher-content {
+    display: none;
+    position: absolute;
+    top: 100%;      /* abaixo do botão */
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    min-width: 160px;
+    z-index: 20;
+}
+
+/* LINKS DENTRO DO DROPDOWN */
+.recolher-content a {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.3rem 0;
+    border-bottom: none; /* senão pega o estilo da navbar */
+}
+
+/* HOVER DOS LINKS DO DROPDOWN */
+.recolher-content a:hover {
+    color: var(--main-color);
+}
+
+/* MOSTRAR DROPDOWN NO HOVER */
+.recolher:hover .recolher-content {
+    display: block;
+}
+
+/* OPCIONAL: DESTACAR O BOTÃO QUANDO ABERTO/HOVER */
+.recolher:hover .conteudo {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
 section{
     position: relative;
     width: 100%;
