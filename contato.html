@@ -1,31 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="contato.css">
 </head>
 <body>
-    <header class="header">
-        <a href="home.html" class="logo">
-            <img src="img_logo.png" alt="" width="100px">
-        <i class='bx bx-menu' id="menu-icon"></i>
 
-        <nav class="navbar">
-            <a href="home.html" class="active">Home</a>
-            <a href="conteudo.html">Conteúdo</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    <section>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="ods3-conteudo.html">ODS 3</a>
+        <a href="ods9-conteudo.html">ODS 9</a>
+        <a href="sobre.html">SOBRE</a>
+        
+    </nav>
 
-    </section>
-    <footer class="footer">
-        <div id="footer-content">
-            <p>Desenvolvido por:</p><br>
-            <p>Gabriel • Ryan • Fernando</p>
+    <div id="form-container">
+        <figure id="img-background"></figure>
+        <div id="form-section">
+            <form action="https://formspree.io/f/manpzovb" method="POST">
+                <divf id="form-group">
+                    <div class="form-field">
+                        <label for="nome">Digite seu nome:</label>
+                        <input type="text" required id="nome" name="nome" placeholder="Nome">
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Digite seu e-mail:</label>
+                        <input type="email" required id="email" name="email" placeholder="Email" >
+                    </div>
+                    <div class="form-field">
+                        <div id="msg-field">
+                            <label for="mensagem">Deixe sua mensagem, sugestões e/ou melhorias abaixo 👇:</label>
+                            <textarea required id="mensagem" name="mensagem" ></textarea>
+                        </div>
+                    </div>
+
+                    
+                        <div id="btn-enviar">
+                            <button  type="submit" required formtarget="_blank" required>Enviar</button>
+                        </div>
+
+                </div>
+                    
+
+            </form>
         </div>
+        
+    </div>
+
+    <footer>
+        <p>2025 - Projeto desenvolvido pelos alunos: Fernando, Gabriel Farias e Ryan.</p>
     </footer>
+    
 </body>
 </html>

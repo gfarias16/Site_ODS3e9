@@ -7,6 +7,12 @@
             margin: 0;
             padding: 0;
         }
+
+        body{
+            background:url("img/parede_verde.jpg") no-repeat;
+            background-size: cover;
+
+        }
  
         /* Container principal para centralizar o conteúdo */
         #quadro-branco{
@@ -26,9 +32,9 @@
             background-size: cover;
             
         }
-        /* Cabeçalho */
+        
         header {
-            background-color: #4CAF50; /* Cor verde (associada à saúde e ODS 3) */
+            background-color: #4CAF50; 
             color: #ffffff;
             padding: 20px;
             text-align: center;
@@ -64,29 +70,31 @@
             padding: 16px;
             margin-top: 16px;
             box-shadow: 0px 0px 10px #4CAF50;
-            border-radius:5px
-
+            border-radius:5px;
+            background-color: white;
         }
+
+    
         
 
-        /* Seções de Conteúdo */
+        
         section {
-            margin-bottom: 25px; /* Espaçamento entre as seções */
+            margin-bottom: 25px; 
         }
 
         h2 {
-            color: #4CAF50; /* Títulos de seção na cor verde */
-            border-bottom: 2px solid #eee; /* Linha sutil abaixo do título */
+            color: #4CAF50; 
+            border-bottom: 2px solid #eee; 
             padding-bottom: 10px;
         }
 
-        /* Lista de metas */
+        
         ul {
             padding-left: 20px;    
         }
 
         li {
-            margin-bottom: 5px; /* Espaçamento entre itens da lista */
+            margin-bottom: 5px; 
         }
 
         #tabela table{
@@ -104,19 +112,22 @@
             padding: 5px;
         }
 
-        /* Rodapé */
+       
         footer {
+            
             text-align: center;
             margin-top: 20px;
-            font-size: 12px;
-            color: #777;
+            font-size: 13px;
+            color: #ffffff;
+            
         }
 
         footer a{
-            color:#777;
+            color:#ffffff;
             text-decoration: none;
         }
         footer a:hover{
             font-size: 13px;
             color: rgb(107, 168, 219);
         }
+
