@@ -26,6 +26,8 @@ body{
     background-size: cover;
     width: 650px;
     height: 500px;
+    border: inset rgba(126, 126, 9, 0.138);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.217);
 }
 
 table{
@@ -36,6 +38,7 @@ table{
 
 h1, td{
     text-align: center;
+    padding: 8px;
     
 }
 
@@ -53,7 +56,9 @@ table th, td{
     display: flex;
     margin: 10px;
     gap: 5px;
-    height: auto;
+    text-align: center;
+    
+    
 
 }
 
@@ -61,7 +66,8 @@ p{
     font-weight: bolder;
     background-color: rgba(226, 233, 228, 0.125);
     border: 1px inset rgba(219, 219, 219, 0.299);
-    font-size: 1;
+    box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.178);
+    
     
     
 }
