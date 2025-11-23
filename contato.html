@@ -19,7 +19,7 @@
     <div id="form-container">
         <figure id="img-background"></figure>
         <div id="form-section">
-            <form action="https://formspree.io/f/manpzovb" method="POST">
+            <form action="https://formspree.io/f/manpzovb" method="POST" onsubmit="return confirmarEnvio()">
                 <divf id="form-group">
                     <div class="form-field">
                         <label for="nome">Digite seu nome:</label>
@@ -38,7 +38,7 @@
 
                     
                         <div id="btn-enviar">
-                            <button  type="submit" required formtarget="_blank" required>Enviar</button>
+                            <button  type="submit" formtarget="_blank" required>Enviar</button>
                         </div>
 
                 </div>
@@ -48,6 +48,7 @@
         </div>
         
     </div>
+    <script src="script.js"></script>
 
     <footer>
         <p>2025 - Projeto desenvolvido pelos alunos: Fernando, Gabriel Farias e Ryan.</p>

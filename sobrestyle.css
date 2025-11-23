@@ -1,0 +1,67 @@
+html, body{
+    height: 100%;
+}
+body{
+    background-color: rgba(44, 29, 2, 0.907);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.container{
+    background: url("img/um-campo-de-milho-com-o-sol-se-pondo-ao-fundo_391229-5999.avif")no-repeat;
+    background-size: cover;
+    width: 850px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+ 
+.quadrado{
+    
+    background: url("img/orange-green-blur-gradation-wallpaper-preview.jpg");
+    background-size: cover;
+    width: 650px;
+    height: 500px;
+}
+
+table{
+    border: 1px solid;
+    width: 450px;
+    margin: auto;
+}
+
+h1, td{
+    text-align: center;
+    
+}
+
+table th, td{
+    border: 1px solid;
+    background-color: rgba(217, 211, 211, 0.309);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bolder;
+    
+        
+}
+
+.bg-texto {
+    display: flex;
+    margin: 10px;
+    gap: 5px;
+    height: auto;
+
+}
+
+p{
+    font-weight: bolder;
+    background-color: rgba(226, 233, 228, 0.125);
+    border: 1px inset rgba(219, 219, 219, 0.299);
+    font-size: 1;
+    
+    
+}
