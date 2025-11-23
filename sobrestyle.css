@@ -71,3 +71,17 @@ p{
     
     
 }
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    
+         
+}
+
+footer p{
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(240, 248, 255, 0);
+}
