@@ -1,5 +1,6 @@
  /* Estilos Gerais */
-        body {
+
+        .page-ods3 {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background-color: #f4f4f4; /* Cor de fundo leve */
@@ -175,12 +176,12 @@
             padding-top:16px;  
         }*/
 
-        nav a:hover { /* Animação ao passar o cursor por cima da navegacao */
+        /*nav a:hover { 
             font-size: 1.7rem;
             color:#4CAF50;
             padding-bottom: 0;
             margin-bottom: 0;
-        }
+        }*/
 
        .centralizar iframe {
             display: block;

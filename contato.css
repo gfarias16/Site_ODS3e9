@@ -1,52 +1,56 @@
 
 body{
-    background: url("img/orange-green-blur-gradation-wallpaper-preview.jpg") no-repeat;
+    background:url("img-sobre.avif")no-repeat;
     background-size: cover;
     /*font-family: Arial, sans-serif;*/
     color: rgb(99, 99, 99);
     
 }
 #form-container{
-    background-color: rgb(255, 255, 255);
-    width: 950px;
-    height: 450px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    width: min(900px, 90%);
+    margin: 120px auto 40px;
+    gap: 0;
     display: flex;
-    box-shadow: 0px 0px 15px 1px rgb(0,0,0,0.15);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
 }
 #img-background{
-    background:url("img/um-campo-de-milho-com-o-sol-se-pondo-ao-fundo_391229-5999.avif")no-repeat;
+    flex: 1;
+    background:url("img-form.png")no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    
+   
 }
 
 #form-section{
-    background-color: rgb(255, 255, 255);
-    width: 90%;
-    height: 90%;
-    
-
+    flex: 1.2;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
 }
 
 #form-group{
-    display:flex;
+    display: flex;
     flex-direction: column;
+    gap: 12px;
+    width: 100%;
 }
 
 .form-field{
-    display: flex;
+   display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     
 
 }
-.form-field, label{
-    
-    display: flex;
-    justify-content: center;
+.form-field label{
     cursor: pointer;
-    margin: 5px 0px 10px 0px;  
+    margin: 5px 0 8px;
+    font-weight: 600;
 }
 
 input{

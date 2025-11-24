@@ -1,22 +1,39 @@
+/*  
+   * RESET GLOBAL
+   - Remove margens padrão que os navegadores colocam nos elementos.
+*/
 *{
     margin: 0;
 }
+
+/* 
+   * HEADER (cabeçalho fixo)
+   - Fica sempre no topo da tela.
+   - Blur deixa o fundo esfumaçado.
+   - Flex organiza os itens lado a lado.
+*/
 .header{
-    position: fixed; 
+    position: fixed;          /* deixa o header fixo no topo */
     top: 0;
     left: 0px;
-    width: 100%;
+    width: 100%;              /* ocupa toda a largura da tela */
     height: 60px;
-    padding: 1rem clamp(1rem, 4vw, 2rem);      /* padding responsivo */
-    background-color: rgb(20, 20, 20, 0.7);
+    padding: 1rem clamp(1rem, 4vw, 2rem); /* padding responsivo */
+    background-color: rgb(20, 20, 20, 0.7); /* fundo preto transparente */
     color: #ffffff;
-    /*opacity: 0.5;*/
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between ;
+    backdrop-filter: blur(10px); /* efeito vidro esfumaçado */
+    
+    display: flex;            /* organiza logo + menu em linha */
+    justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    z-index: 10;              /* garante que fique acima dos vídeos e imagens */
 }
+
+
+/* 
+   * LOGO
+   - Anima levemente quando passa o mouse.
+*/
 .logo {
     font-size: 3rem;
     color: var(--text-color);
@@ -26,67 +43,82 @@
 }
 
 .logo:hover{
-    transform: scale(1.1);
+    transform: scale(1.1);    /* aumenta 10% ao passar o mouse */
 }
+
 .logo span{
-    text-shadow: 0 0 25px var(--main-color);
+    text-shadow: 0 0 25px var(--main-color); /* brilho da cor principal */
 }
+
+
+/* 
+   * BARRA DE NAVEGAÇÃO (links do menu)
+   - Usamos flex para alinhar links horizontalmente.
+*/
 .navbar {
     display: flex;
-    width: 32%;
+    width: 32%;                     /* largura da área de links */
     align-items: center;
-    gap: clamp(2rem, 2.5vw, 4rem); 
-    margin-left: auto;
+    gap: clamp(2rem, 2.5vw, 4rem);  /* espaçamento responsivo entre os links */
+    margin-left: auto;              /* empurra o menu para a direita */
 }
+
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
     font-weight: 200;
     transition: 0.7s ease;
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid transparent; /* linha inferior invisível */
     text-decoration: none;
 }
+
+/* 
+   * LINKS DO MENU AO PASSAR O MOUSE
+   - A linha aparece e muda a cor.
+*/
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
-    padding-bottom:0;
-    margin-bottom: 0;
 }
 
-
-/* CONTÊINER DO DROPDOWN */
+/*  
+   * DROPDOWN ("Conteúdo")
+   - O botão abre uma caixinha com dois links.
+*/
 .recolher {
-    position: relative;
+    position: relative; /* necessário para posicionar o dropdown */
     display: flex;
     align-items: center;
 }
 
-/* BOTÃO "CONTEÚDO" */
+/* BOTÃO do dropdown */
 .conteudo {
     background: transparent;
     border: none;
     outline: none;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: var(--text-color);
     font-weight: 200;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    padding: 0; /* pra alinhar com os <a> */
+    padding: 0;       /* remove espaçamento que desalinha com o menu */
 }
 
-/* TIRA O ESTILO DE BOTÃO FEIO NO HOVER/FOCUS */
 .conteudo:focus {
     outline: none;
 }
 
-/* DROPDOWN EM SI (OS LINKS INTERNOS) */
+/*  
+   * CAIXA DO DROPDOWN (links internos)
+   - Começa escondida e aparece no hover.
+*/
 .recolher-content {
-    display: none;
+    display: none;           /* escondido por padrão */
     position: absolute;
-    top: 100%;      /* abaixo do botão */
+    top: 100%;               /* aparece logo abaixo do botão */
     left: 0;
     background: rgba(0, 0, 0, 0.9);
     padding: 0.75rem 1rem;
@@ -95,40 +127,53 @@
     z-index: 20;
 }
 
-/* LINKS DENTRO DO DROPDOWN */
+/* LINKS internos do dropdown */
 .recolher-content a {
     display: block;
     font-size: 1.4rem;
     color: var(--text-color);
     text-decoration: none;
     padding: 0.3rem 0;
-    border-bottom: none; /* senão pega o estilo da navbar */
+    border-bottom: none;
 }
 
-/* HOVER DOS LINKS DO DROPDOWN */
+/* HOVER do dropdown */
 .recolher-content a:hover {
     color: var(--main-color);
 }
 
-/* MOSTRAR DROPDOWN NO HOVER */
+/* MOSTRA O DROPDOWN QUANDO PASSA O MOUSE */
 .recolher:hover .recolher-content {
     display: block;
 }
 
-/* OPCIONAL: DESTACAR O BOTÃO QUANDO ABERTO/HOVER */
+/* DESTACA O BOTÃO DO DROPDOWN QUANDO ABRE */
 .recolher:hover .conteudo {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
+
+
+
+/* 
+   * SECTION
+   - Área principal de cada página.
+   - Sempre ocupa 100% da altura visível.
+*/
 .section{
     position: relative;
     width: 100%;
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
+
+/*
+   * CONTAINER do vídeo da Home
+   - Preenche toda a área e fica por trás do texto.
+*/
 .container{
     overflow: hidden;
     position: absolute;
@@ -137,14 +182,21 @@
     width: 100%;
     height: 100%;
 }
+
+/* VÍDEO EM FULLSCREEN COM OBJECT-FIT */
 .video{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* garante que o vídeo preencha sem deformar */
 }
+
+/*
+   * CAMADA ESCURA SOBRE O VÍDEO
+   - Melhora a leitura do texto.
+*/
 .overlay{
     overflow: hidden;
     position: absolute;
@@ -153,18 +205,29 @@
     background-color: rgb(2, 11, 24);
     width: 100%;
     height: 100vh;
-    opacity: 0.5;
+    opacity: 0.5;    /* intensidade da camada escura */
     z-index: 1;
 }
 
+/* 
+   * ÍCONE DO MENU MOBILE
+   - Só aparece em telas menores.
+*/
 #menu-icon{
     font-size: 3.6rem;
-    color: var(--main-color);
-    display: none;
+    color: #fff;
+    cursor: pointer;
+    display: none;  /* aparece apenas no mobile */
 }
+
 section{
    width: 100%;
 }
+
+
+/*  
+   * HOME (conteúdo principal)
+*/
 .home{
     position: relative;
     min-height: 100vh;
@@ -172,11 +235,11 @@ section{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    
 }
+
 .home-content{
     position: relative;
-    z-index: 2;
+    z-index: 2; /* aparece acima do vídeo */
     color: aliceblue;
     display: flex;
     flex-direction: column;
@@ -185,17 +248,21 @@ section{
     justify-content: center;
     margin-top: 3rem;
 }
+
 span{
     color: var(--main-color);
 }
+
 .logo span{
     color: var(--main-color);
 }
+
 .home-content h3{
     margin-bottom: 2rem;
     margin-top: 1rem;
     font-size: 3.5rem;
 }
+
 .home-content h1{
     font-size: 7rem;
     font-weight: 700;
@@ -203,15 +270,17 @@ span{
     line-height: 1;
 }
 
+/* 
+   * RODAPÉ
+   - Fica no final da página.
+*/
 .footer {
     font-family: 'Inter', sans-serif;
     color: aliceblue;
     width: 100%;
     padding: 1.5rem 0;
-    margin: 0;
     text-align: center;
     background: rgb(0, 3, 7);
-    top: 10%;
 }
 
 /*#footer-content{

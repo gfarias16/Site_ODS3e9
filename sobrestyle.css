@@ -2,31 +2,46 @@ html, body{
     height: 100%;
 }
 .page-sobre{
-    background-color: rgba(44, 29, 2, 0.907);
+    background-color: rgb(20, 20, 20, 0.7);
     /*display: flex;*/
     justify-content: center;
     align-items: center;
-
-}
-.container-sobre{
-    background: url("img/um-campo-de-milho-com-o-sol-se-pondo-ao-fundo_391229-5999.avif")no-repeat;
+    background: url("img-sobre.avif")no-repeat center center fixed;
     background-size: cover;
-    width: 850px;
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    min-height: 100vh;
 }
+/*.container-sobre{
+    
+   background: rgba(255, 255, 255, 0.25); 
+    backdrop-filter: blur(10px);           
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    padding: 30px;
+    width: 85%;
+    max-width: 1100px;
+
+    margin: 40px auto 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 0 0 30px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.35);
+
+}*/
  
 .quadrado{
     
-    background: url("img/orange-green-blur-gradation-wallpaper-preview.jpg");
-    background-size: cover;
-    width: 650px;
-    height: 500px;
-    border: inset rgba(126, 126, 9, 0.138);
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.217);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
 }
 
 table{

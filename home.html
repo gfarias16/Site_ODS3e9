@@ -5,18 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ODS</title>
     <link rel="stylesheet" href="style.css">
+    <!-- 
+        Importa a biblioteca de ícones Boxicons
+        Usada para o ícone do menu mobile (bx-menu)
+    -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+<!-- 
+    A classe "page-home" serve para aplicar estilos específicos 
+    apenas nesta página, se você quiser no CSS.
+-->
 <body class="page-home">
 
+    <!--MENU DE NAVEGAÇAO-->
     <header class="header">
         <a href="home.html" class="logo">
             <img src="img_logo.png" alt="" width="100px">
         <i class='bx bx-menu' id="menu-icon"></i>
         </a>
+         <!-- 
+            NAVBAR — contém os links principais do site.
+            Está posicionada à direita por causa do flex (CSS).
+        -->
         <nav class="navbar">
             <a href="home.html" class="active">Home</a>
-
+             <!-- 
+                Dropdown "Conteúdo": 
+                Quando passa o mouse, abre as opções ODS3 e ODS9.
+            -->
             <div class="recolher">
                 <button class="conteudo">Conteúdo
                     <i class="fa fa-caret-down"></i>
@@ -30,15 +46,28 @@
             <a href="contato.html">Contato</a>
         </nav>
     </header>
+     <!--SEÇAO COM VIDEO DE FUNDO NA HOME-->
     <section class="home" id="home">
-
+        <!-- 
+            container do vídeo:
+            - O vídeo preenche a tela inteira
+            - overlay escurece o vídeo para o texto ficar legível
+        -->
         <div class="container">
+            <!-- camada escura sobre o vídeo -->
             <div class="overlay"></div>
+            <!-- 
+                Vídeo em autoplay, sem som (muted) e loop infinito.
+                O "object-fit: cover" no CSS faz ele preencher a tela sem deformar.
+            -->
             <video class="video" autoplay muted loop >
                 <source src="video.mp4">
             </video>
         </div>
-        
+        <!-- 
+            CONTEÚDO VISÍVEL SOBRE O VÍDEO
+            z-index: 2 no CSS garante que fique acima do vídeo.
+        -->
         <div class="home-content">
             <h1>Bem vindos à <span>ODS 3 e 9</span></h1>
             <!--<h3 class="text-animation">está ODS <span></span></h3>-->
