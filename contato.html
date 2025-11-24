@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contato.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
+<body class="page-contato">
+
     <header class="header">
         <a href="home.html" class="logo">
             <img src="img_logo.png" alt="" width="100px">
@@ -29,7 +31,41 @@
             <a href="contato.html">Contato</a>
         </nav>
     </header>
-    <section>
+    <section class="section">
+
+        <div id="form-container">
+        <figure id="img-background"></figure>
+            <div id="form-section">
+                <form action="https://formspree.io/f/manpzovb" method="POST" onsubmit="return confirmarEnvio()">
+                    <div id="form-group">
+                        <div class="form-field">
+                            <label for="nome">Digite seu nome:</label>
+                            <input type="text" required id="nome" name="nome" placeholder="Nome">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Digite seu e-mail:</label>
+                            <input type="email" required id="email" name="email" placeholder="Email" >
+                        </div>
+                        <div class="form-field">
+                            <div id="msg-field">
+                                <label for="mensagem">Deixe sua mensagem, sugestões e/ou melhorias abaixo 👇:</label>
+                                <textarea required id="mensagem" name="mensagem" ></textarea>
+                            </div>
+                        </div>
+
+                    
+                            <div id="btn-enviar">
+                                <button  type="submit" formtarget="_blank" required>Enviar</button>
+                            </div>
+
+                    </div>
+                    
+
+                </form>
+            </div>
+        
+        </div>
+    <script src="script.js"></script>
 
     </section>
     <footer class="footer">

@@ -53,6 +53,8 @@
     padding-bottom:0;
     margin-bottom: 0;
 }
+
+
 /* CONTÊINER DO DROPDOWN */
 .recolher {
     position: relative;
@@ -118,7 +120,7 @@
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
-section{
+.section{
     position: relative;
     width: 100%;
     min-height: 100vh; 
