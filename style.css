@@ -1,290 +1,344 @@
 /*  
    * RESET GLOBAL
-   - Remove margens padrão que os navegadores colocam nos elementos.
+   - Remove a margem padrão que o navegador aplica em todos os elementos.
+   - Isso ajuda a ter um layout mais previsível.
 */
 *{
     margin: 0;
 }
 
 /* 
-   * HEADER (cabeçalho fixo)
-   - Fica sempre no topo da tela.
-   - Blur deixa o fundo esfumaçado.
-   - Flex organiza os itens lado a lado.
+   * HEADER (cabeçalho fixo do site)
+   - Fica sempre preso no topo da tela, mesmo rolando a página.
+   - Usa efeito de blur no fundo (glassmorphism).
+   - Usa flexbox pra alinhar logo + menu na mesma linha.
 */
 .header{
-    position: fixed;          /* deixa o header fixo no topo */
-    top: 0;
-    left: 0px;
-    width: 100%;              /* ocupa toda a largura da tela */
-    height: 60px;
-    padding: 1rem clamp(1rem, 4vw, 2rem); /* padding responsivo */
-    background-color: rgb(20, 20, 20, 0.7); /* fundo preto transparente */
-    color: #ffffff;
-    backdrop-filter: blur(10px); /* efeito vidro esfumaçado */
-    
-    display: flex;            /* organiza logo + menu em linha */
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;              /* garante que fique acima dos vídeos e imagens */
+    position: fixed;                          /* fixa o header no topo */
+    top: 0;                                   /* encostado no topo da tela */
+    left: 0px;                                /* encostado na esquerda */
+    width: 100%;                              /* ocupa toda a largura da janela */
+    height: 60px;                             /* altura fixa do cabeçalho */
+    padding: 1rem clamp(1rem, 4vw, 2rem);     /* padding horizontal responsivo */
+    background-color: rgb(20, 20, 20, 0.7);   /* fundo escuro meio transparente */
+    color: #ffffff;                           /* texto branco */
+    backdrop-filter: blur(10px);              /* aplica desfoque no que está atrás (efeito vidro) */
+    display: flex;                            /* layout em linha: logo + navbar */
+    justify-content: space-between;           /* espaço máximo entre logo e navbar */
+    align-items: center;                      /* alinha verticalmente ao centro */
+    z-index: 10;                              /* garante que fique por cima de vídeo/imagens */
 }
-
 
 /* 
    * LOGO
-   - Anima levemente quando passa o mouse.
+   - Link/área que costuma levar de volta para a Home.
+   - Tem uma animação leve ao passar o mouse.
 */
 .logo {
-    font-size: 3rem;
-    color: var(--text-color);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.3s ease;
+    font-size: 3rem;                          /* tamanho da fonte (se usar texto) */
+    font-weight: 800;                         /* texto bem “negrito” */
+    cursor: pointer;                          /* mostra o ícone de mãozinha */
+    transition: 0.3s ease;                    /* animações suaves (hover etc) */
 }
 
+/* Efeito de zoom na logo quando passa o mouse */
 .logo:hover{
-    transform: scale(1.1);    /* aumenta 10% ao passar o mouse */
+    transform: scale(1.1);                    /* aumenta em 10% o tamanho */
 }
 
+/* Parte da logo dentro de um <span> com brilho especial */
 .logo span{
-    text-shadow: 0 0 25px var(--main-color); /* brilho da cor principal */
+    text-shadow: 0 0 25px var(--main-color);  /* brilho da cor principal ao redor do texto */
 }
-
 
 /* 
-   * BARRA DE NAVEGAÇÃO (links do menu)
-   - Usamos flex para alinhar links horizontalmente.
+   * BARRA DE NAVEGAÇÃO (NAVBAR)
+   - Contém os links Home, Conteúdo, Sobre, Contato.
+   - Fica alinhada à direita do cabeçalho.
 */
 .navbar {
-    display: flex;
-    width: 32%;                     /* largura da área de links */
-    align-items: center;
-    gap: clamp(2rem, 2.5vw, 4rem);  /* espaçamento responsivo entre os links */
-    margin-left: auto;              /* empurra o menu para a direita */
+    display: flex;                            /* links em linha */
+    width: 32%;                               /* largura aproximada da área de menu */
+    align-items: center;                      /* centraliza verticalmente */
+    gap: clamp(2rem, 2.5vw, 4rem);           /* espaço entre os links, responsivo */
+    margin-left: auto;                        /* empurra a navbar para a direita */
 }
 
+/* Links da navbar (Home, Sobre, etc) */
 .navbar a {
-    font-size: 1.7rem;
-    color: var(--text-color);
-    font-weight: 200;
-    transition: 0.7s ease;
-    border-bottom: 3px solid transparent; /* linha inferior invisível */
-    text-decoration: none;
+    font-size: 1.7rem;                        /* tamanho da fonte dos links */
+    color: var(--text-color);                 /* cor padrão do texto */
+    font-weight: 200;                         /* peso de fonte mais fino */
+    transition: 0.7s ease;                    /* transição suave para hover/active */
+    border-bottom: 3px solid transparent;     /* “linha” invisível para animar no hover */
+    text-decoration: none;                    /* tira sublinhado padrão do link */
 }
 
 /* 
    * LINKS DO MENU AO PASSAR O MOUSE
-   - A linha aparece e muda a cor.
+   - A linha embaixo aparece e a cor muda para a cor principal.
 */
 .navbar a:hover,
 .navbar a.active {
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+    color: var(--main-color);                 /* muda cor do texto */
+    border-bottom: 3px solid var(--main-color); /* mostra linha colorida embaixo do link */
 }
 
 /*  
    * DROPDOWN ("Conteúdo")
-   - O botão abre uma caixinha com dois links.
+   - É um menu suspenso que abre ao passar o mouse.
 */
 .recolher {
-    position: relative; /* necessário para posicionar o dropdown */
+    position: relative;                       /* referência para posicionar o dropdown */
     display: flex;
     align-items: center;
 }
 
-/* BOTÃO do dropdown */
+/* 
+   * BOTÃO do dropdown ("Conteúdo")
+   - Estilizado como texto, alinhado com os outros links do menu.
+*/
 .conteudo {
-    background: transparent;
-    border: none;
-    outline: none;
+    background: transparent;                  /* sem cor de fundo */
+    border: none;                             /* sem borda de botão padrão */
+    outline: none;                            /* remove contorno de foco padrão */
     font-size: 1.4rem;
     color: var(--text-color);
     font-weight: 200;
-    cursor: pointer;
+    cursor: pointer;                          /* mostra mãozinha ao passar o mouse */
     display: flex;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0;       /* remove espaçamento que desalinha com o menu */
+    gap: 0.3rem;                              /* espaço entre o texto e o ícone de seta */
+    padding: 0;                               /* evita desalinhamento com os links <a> */
 }
 
+/* Quando o botão recebe foco via teclado, não mostra aquele contorno azul padrão */
 .conteudo:focus {
     outline: none;
 }
 
 /*  
-   * CAIXA DO DROPDOWN (links internos)
-   - Começa escondida e aparece no hover.
+   * CAIXA DO DROPDOWN (lista de links ODS3 / ODS9)
+   - Começa escondida e aparece quando o mouse passa em cima.
 */
 .recolher-content {
-    display: none;           /* escondido por padrão */
-    position: absolute;
-    top: 100%;               /* aparece logo abaixo do botão */
+    display: none;                            /* escondido por padrão */
+    position: absolute;                       /* posicionado em relação ao .recolher */
+    top: 100%;                                /* aparece logo abaixo do botão */
     left: 0;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
-    min-width: 160px;
-    z-index: 20;
+    background: rgba(0, 0, 0, 0.9);           /* fundo preto translúcido */
+    padding: 0.75rem 1rem;                    /* espaço interno dos links */
+    border-radius: 0.5rem;                    /* cantos arredondados */
+    min-width: 160px;                         /* largura mínima da caixinha */
+    z-index: 20;                              /* fica à frente de outros elementos */
 }
 
-/* LINKS internos do dropdown */
+/* LINKS internos do dropdown (ODS 3 / ODS 9) */
 .recolher-content a {
-    display: block;
+    display: block;                           /* ocupa linha inteira */
     font-size: 1.4rem;
     color: var(--text-color);
-    text-decoration: none;
-    padding: 0.3rem 0;
-    border-bottom: none;
+    text-decoration: none;                    /* tira sublinhado padrão */
+    padding: 0.3rem 0;                        /* espaço vertical entre os links */
+    border-bottom: none;                      /* não herda a linha da navbar */
 }
 
-/* HOVER do dropdown */
+/* HOVER do dropdown: muda a cor do texto dentro da caixinha */
 .recolher-content a:hover {
     color: var(--main-color);
 }
 
-/* MOSTRA O DROPDOWN QUANDO PASSA O MOUSE */
+/* MOSTRA O DROPDOWN QUANDO PASSA O MOUSE SOBRE O CONTÊINER .recolher */
 .recolher:hover .recolher-content {
     display: block;
 }
 
-/* DESTACA O BOTÃO DO DROPDOWN QUANDO ABRE */
+/* DESTACA O BOTÃO DO DROPDOWN QUANDO O MENU ESTÁ ABERTO */
 .recolher:hover .conteudo {
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+    color: var(--main-color);                 /* muda cor do texto "Conteúdo" */
+    border-bottom: 3px solid var(--main-color); /* desenha linha embaixo do texto */
 }
-
-
 
 /* 
    * SECTION
-   - Área principal de cada página.
-   - Sempre ocupa 100% da altura visível.
+   - Usada como wrapper principal em várias páginas.
+   - Aqui está configurada para empilhar conteúdo na vertical.
 */
 .section{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
+    position: relative;                       /* referência para elementos absolutos dentro */
+    width: 100%;                              /* ocupa toda a largura */
+    min-height: auto;                         /* altura mínima automática (depende do conteúdo) */
+    flex-direction: column;                   /* um elemento embaixo do outro */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    align-items: center;                      /* centraliza conteúdo na horizontal */
+    justify-content: flex-start;              /* começa alinhando no topo da section */
+    padding-top: 100px;                       /* espaço para não ficar embaixo do header fixo */
+    overflow: hidden;                         /* corta qualquer coisa que “escape” da area */
 }
 
 /*
    * CONTAINER do vídeo da Home
-   - Preenche toda a área e fica por trás do texto.
+   - Fica ocupando toda a section por trás do conteúdo.
 */
 .container{
-    overflow: hidden;
-    position: absolute;
+    overflow: hidden;                         /* esconde partes do vídeo que extravasem */
+    position: absolute;                       /* fica “solto” dentro da section */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
 
-/* VÍDEO EM FULLSCREEN COM OBJECT-FIT */
+/* 
+   * VÍDEO EM FULLSCREEN
+   - Preenche toda a área do container, sem distorcer, usando object-fit.
+*/
 .video{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* garante que o vídeo preencha sem deformar */
+    width: 100%;                              /* largura total da section */
+    height: 100%;                             /* altura total da section */
+    object-fit: cover;                        /* preenche mantendo proporção e cortando o excesso */
 }
 
 /*
-   * CAMADA ESCURA SOBRE O VÍDEO
-   - Melhora a leitura do texto.
+   * CAMADA ESCURA SOBRE O VÍDEO (overlay)
+   - Serve para escurecer o fundo e aumentar contraste com o texto.
 */
 .overlay{
     overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(2, 11, 24);
+    background-color: rgb(2, 11, 24);         /* cor escura acima do vídeo */
     width: 100%;
-    height: 100vh;
-    opacity: 0.5;    /* intensidade da camada escura */
-    z-index: 1;
+    height: 100vh;                            /* altura da tela visível */
+    opacity: 0.5;                             /* deixa o overlay semitrasparente */
+    z-index: 1;                               /* acima do vídeo, abaixo do texto */
 }
 
 /* 
-   * ÍCONE DO MENU MOBILE
-   - Só aparece em telas menores.
+   * ÍCONE DO MENU MOBILE (hambúrguer)
+   - Só aparece no modo mobile (ativado por media query, se você criar).
 */
 #menu-icon{
-    font-size: 3.6rem;
+    font-size: 3.6rem;                        /* tamanho grande pro ícone */
     color: #fff;
-    cursor: pointer;
-    display: none;  /* aparece apenas no mobile */
+    cursor: pointer;                          /* mostra mãozinha ao passar o mouse */
+    display: none;                            /* fica escondido no desktop */
 }
 
+/* section genérica (por tag, além da classe .section) ocupa a largura toda */
 section{
    width: 100%;
 }
 
-
 /*  
-   * HOME (conteúdo principal)
+   * HOME (conteúdo principal da página inicial)
 */
 .home{
     position: relative;
-    min-height: 100vh;
+    min-height: 100vh;                        /* ocupa toda a altura da tela */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden;                         /* esconde o que sair da área */
 }
 
+/*
+   * CONTEÚDO DA HOME
+   - Texto que fica por cima do vídeo.
+*/
 .home-content{
     position: relative;
-    z-index: 2; /* aparece acima do vídeo */
-    color: aliceblue;
+    z-index: 2;                               /* aparece acima do vídeo e do overlay */
+    color: aliceblue;                         /* cor do texto */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-top: 3rem;
+    flex-direction: column;                   /* título, subtítulo e parágrafo em coluna */
+    align-items: center;                      /* centraliza na horizontal */
+    text-align: center;                       /* centraliza o texto */
+    justify-content: center;                  /* centraliza na vertical, dentro do bloco */
+    margin-top: 3rem;                         /* empurra um pouco pra baixo */
 }
 
+/* 
+   * Span genérico
+   - Muito usado pra destacar palavras importantes.
+*/
 span{
-    color: var(--main-color);
+    color: var(--main-color);                 /* coloca a cor principal (ODS) no texto */
 }
 
+/* 
+   * Span dentro da logo
+   - Também recebe a cor principal.
+*/
 .logo span{
     color: var(--main-color);
 }
 
+/* Subtítulo da home (se usado) */
 .home-content h3{
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-bottom: 2rem;                      /* espaço abaixo do h3 */
+    margin-top: 1rem;                         /* espaço acima do h3 */
     font-size: 3.5rem;
 }
 
+/* Título principal da home */
 .home-content h1{
-    font-size: 7rem;
-    font-weight: 700;
+    font-size: 7rem;                          /* título grande pra impacto */
+    font-weight: 700;                         /* negrito forte */
     margin-top: 1.5rem;
-    line-height: 1;
+    line-height: 1;                           /* altura de linha bem próxima (texto compacto) */
 }
 
 /* 
-   * RODAPÉ
-   - Fica no final da página.
+   * LAYOUT ESPECÍFICO DA PÁGINA CONTATO
+   - Faz o body virar um flex container em coluna:
+     header em cima, section no meio, footer embaixo.
 */
-.footer {
-    font-family: 'Inter', sans-serif;
-    color: aliceblue;
-    width: 100%;
-    padding: 1.5rem 0;
-    text-align: center;
-    background: rgb(0, 3, 7);
+body.page-contato {
+    min-height: 100vh;                        /* corpo ocupa no mínimo a altura da tela */
+    display: flex;
+    flex-direction: column;                   /* empilha header, conteúdo e footer */
 }
 
-/*#footer-content{
+/*
+   * SECTION DENTRO DA PÁGINA CONTATO
+   - Ocupa o “espaço flexível” entre o header fixo e o footer.
+   - Garante que o footer fique colado lá embaixo em telas grandes.
+*/
+body.page-contato section {
+    flex: 1;                                  /* cresce pra empurrar o footer pra baixo */
+    display: flex;
+    justify-content: center;                  /* centraliza o formulário na horizontal */
+    align-items: center;                      /* centraliza na vertical (dentro do espaço disponível) */
+    padding-top: 100px;                       /* espaço por causa do header fixo */
+    padding-bottom: 20px;                     /* pequeno espaço acima do footer */
+}
+
+/* 
+   * RODAPÉ (FOOTER)
+   - Barra no final do site com créditos do projeto.
+*/
+.footer {
+    font-family: 'Inter', sans-serif;         /* fonte usada no rodapé */
+    color: aliceblue;                         /* texto clarinho */
+    width: 100%;
+    padding: 1.5rem 0;                        /* altura do rodapé */
+    text-align: center;                       /* texto centralizado */
+    background: rgb(0, 3, 7);                 /* fundo bem escuro */
+}
+
+/* 
+   Exemplo de estilo pra conteúdo interno do footer (mantido comentado):
+   Poderia ser usado pra alinhar outros elementos dentro do footer.
+*/
+/*
+#footer-content{
     text-align: center;
     align-items: center;
     align-content: center;
-}*/
+}
+*/

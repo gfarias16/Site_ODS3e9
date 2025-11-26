@@ -1,247 +1,168 @@
- .page-ods9 {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+ /* ======== ESTILO GERAL DA PÁGINA ODS 9 ======== */
 
-        .titulo{
-            background-color: #F37626; /* <-- COR ALTERADA para o laranja da ODS 9 */
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            margin: 0;
-            font-size: 36px;
-        }
+.page-ods9 {
+    font-family: Arial, sans-serif;   /* Fonte padrão */
+    line-height: 1.6;                 /* Espaçamento entre linhas */
+    background-color: #f4f4f4;        /* Fundo claro */
+    color: #333;                      /* Cor de texto padrão */
+    margin: 0;
+    padding: 0;
+}
 
-        /* Container principal para centralizar o conteúdo */
-        #quadro-branco{
-            max-width: 950px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0px 0px 10px #F37626;;
-        }
+/* Título principal com a cor da ODS 9 (laranja) */
+.titulo{
+    background-color: #F37626;        /* Laranja oficial da ODS 9 */
+    color: #ffffff;                   /* Texto branco */
+    padding: 20px;                    /* Espaçamento interno */
+    text-align: center;               /* Centraliza o texto */
+    margin: 0;
+    font-size: 36px;                  /* Tamanho do título */
+}
 
-           div img{
-            width: 100%;
-            height: 400px;
-            display: block;
-            background-size: cover;
-            
-        }
-        /*.header{
-            position: fixed; 
-            top: 0;
-            left: 0px;
-            width: 100%;
-            height: 60px;
-            padding: 1rem clamp(1rem, 4vw, 2rem);      
-            background-color: rgb(20, 20, 20, 0.7);
-            color: #ffffff;
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-between ;
-            align-items: center;
-            z-index: 10;
-        }*/
-        /*.logo {
-            font-size: 3rem;
-            color: var(--text-color);
-            font-weight: 800;
-            cursor: pointer;
-            transition: 0.3s ease;
-        }*/
-        
-        /*.logo:hover{
-            transform: scale(1.1);
-        }
-        .logo span{
-            text-shadow: 0 0 25px var(--main-color);
-        }
-        .navbar {
-            display: flex;
-            width: 32%;
-            align-items: center;
-            gap: clamp(2rem, 2.5vw, 4rem); 
-            margin-left: auto;
-        }
-        .navbar a {
-            font-size: 1.7rem;
-            color: var(--text-color);
-            font-weight: 200;
-            transition: 0.7s ease;
-            border-bottom: 3px solid transparent;
-            text-decoration: none;
-        }
-        .navbar a:hover,
-        .navbar a.active {
-            color: var(--main-color);
-            border-bottom: 3px solid var(--main-color);
-        }*/
-        /* CONTÊINER DO DROPDOWN */
-        .recolher {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-        
-        /* BOTÃO "CONTEÚDO" */
-        .conteudo {
-            background: transparent;
-            border: none;
-            outline: none;
-            font-size: 1.7rem;
-            color: var(--text-color);
-            font-weight: 200;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            padding: 0; /* pra alinhar com os <a> */
-        }
-        
-        /* TIRA O ESTILO DE BOTÃO FEIO NO HOVER/FOCUS */
-        .conteudo:focus {
-            outline: none;
-        }
-        
-        /* DROPDOWN EM SI (OS LINKS INTERNOS) */
-        .recolher-content {
-            display: none;
-            position: absolute;
-            top: 100%;      /* abaixo do botão */
-            left: 0;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 0.75rem 1rem;
-            border-radius: 0.5rem;
-            min-width: 160px;
-            z-index: 20;
-        }
-        
-        /* LINKS DENTRO DO DROPDOWN */
-        .recolher-content a {
-            display: block;
-            font-size: 1.4rem;
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 0.3rem 0;
-            border-bottom: none; /* senão pega o estilo da navbar */
-        }
-        
-        /* HOVER DOS LINKS DO DROPDOWN */
-        .recolher-content a:hover {
-            color: var(--main-color);
-        }
-        
-        /* MOSTRAR DROPDOWN NO HOVER */
-        .recolher:hover .recolher-content {
-            display: block;
-        }
-        
-        /* OPCIONAL: DESTACAR O BOTÃO QUANDO ABERTO/HOVER */
-        .recolher:hover .conteudo {
-            color: var(--main-color);
-            border-bottom: 3px solid var(--main-color);
-        }
+/* ======== QUADRO BRANCO CENTRAL ======== */
 
-        /* Cabeçalho */
-       /* header {
-            background-color: #F37626; /* <-- COR ALTERADA para o laranja da ODS 9 
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
+#quadro-branco{
+    max-width: 950px;                 /* Largura máxima do conteúdo */
+    margin: 20px auto;                /* Centraliza horizontalmente */
+    padding: 20px;
+    background-color: #ffffff;        /* Fundo branco */
+    box-shadow: 0px 0px 10px #F37626; /* Sombra laranja em volta */
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
+/* Imagens de destaque da página (banner, gráficos, etc.) */
+div img{
+    width: 100%;                      /* Ocupa toda a largura do container */
+    height: 400px;                    /* Altura fixa */
+    display: block;
+    background-size: cover;           /* Preenche o espaço sem distorcer */
+}
 
-        nav a {
-            color: rgb(124, 124, 124);
-            text-align: center;
-            text-decoration: none;
-            padding-right: 5px;
-            
-        }
+/* ======== DROPDOWN/ MENU HERDADO ======== */
 
-        nav {
-            text-align: center;
-            padding-top:16px;
-        }*/
+/* Contêiner do dropdown */
+.recolher {
+    position: relative;               /* Referência para o submenu */
+    display: flex;
+    align-items: center;
+}
 
-        nav a:hover{ /* Animação ao passar o cursor por cima da navegacao */
-            font-size: 1.7rem;
-            color:#F37626;
-            padding-bottom:0;
-            margin-bottom: 0;
-            
-        }
+/* Botão de texto "Conteúdo" do menu */
+.conteudo {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 200;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0;                       /* Alinha com anchors da navbar */
+}
 
-        .centralizar iframe {
-            display: block;
-            width: 45%;
-            height: 350px;
-            border-style: none;
-            margin:auto;
-            padding: 16px;
-            margin-top: 16px;
-            box-shadow: 0px 0px 10px #F37626;;
-            border-radius:5px
+/* Remove contorno ao focar o botão */
+.conteudo:focus {
+    outline: none;
+}
 
-        }
+/* Caixa flutuante que contém os links do dropdown */
+.recolher-content {
+    display: none;                    /* Escondido por padrão */
+    position: absolute;
+    top: 100%;                        /* Aparece logo abaixo do botão */
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);   /* Fundo preto translúcido */
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    min-width: 160px;
+    z-index: 20;
+}
 
-        /* Seções de Conteúdo */
-        section {
-            margin-bottom: 25px;
-        }
+/* Links internos do dropdown */
+.recolher-content a {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.3rem 0;
+    border-bottom: none;
+}
 
-        h2 {
-            color: #F37626; /* <-- COR ALTERADA para o laranja da ODS 9 */
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
+/* Hover nos links internos */
+.recolher-content a:hover {
+    color: var(--main-color);
+}
 
-        /* Lista de metas */
-        ul {
-            padding-left: 20px;
-        }
+/* Mostra o dropdown quando o mouse está sobre o contêiner */
+.recolher:hover .recolher-content {
+    display: block;
+}
 
-        li {
-            margin-bottom: 5px;
-        }
+/* Destaca o texto "Conteúdo" quando o menu está aberto */
+.recolher:hover .conteudo {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
 
-        #tabela table{
-            border: solid rgb(0, 0, 0);
-            border-width: 1px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        
-        #tabela table, th, td{
-            border: solid;
-            border-width: 1px;
-            border-collapse: collapse;
-            text-align: center;
-            padding: 5px;
-        }
+/* ======== CONTEÚDO DA ODS 9 ======== */
 
-        /* Rodapé */
-       /* footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 13px;
-            color: #777;
-        }
+/* Efeito de hover para links de navegação dessa página 
+   (se estiver usando uma nav interna da ODS 9) */
+nav a:hover{
+    font-size: 1.7rem;       /* Aumenta um pouquinho a fonte */
+    color:#F37626;           /* Usa o laranja da ODS 9 */
+    padding-bottom:0;
+    margin-bottom: 0;
+}
 
-        footer a{
-            color:#777;
-            text-decoration: none;
-        }
-        footer a:hover{
-            font-size: 13px;
-            color: rgb(107, 168, 219);
-        }*/
+/* Centraliza o iframe (vídeo / gráfico) na página */
+.centralizar iframe {
+    display: block;
+    width: 45%;
+    height: 350px;
+    border-style: none;
+    margin:auto;                      /* Centraliza */
+    padding: 16px;
+    margin-top: 16px;
+    box-shadow: 0px 0px 10px #F37626; /* Sombra laranja */
+    border-radius:5px;
+}
+
+/* Cada seção de texto da ODS 9 */
+section {
+    margin-bottom: 25px;
+}
+
+/* Títulos internos (h2) com laranja da ODS 9 */
+h2 {
+    color: #F37626;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Listas (metas, objetivos, etc) */
+ul {
+    padding-left: 20px;               /* Recuo à esquerda */
+}
+
+li {
+    margin-bottom: 5px;               /* Espaço entre cada item da lista */
+}
+
+/* Tabela com dados da ODS 9 */
+#tabela table{
+    border: solid rgb(0, 0, 0);
+    border-width: 1px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Células da tabela */
+#tabela table, th, td{
+    border: solid;
+    border-width: 1px;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+}

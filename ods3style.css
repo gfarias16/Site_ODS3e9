@@ -1,250 +1,210 @@
  /* Estilos Gerais */
 
-        .page-ods3 {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4; /* Cor de fundo leve */
-            color: #333; /* Cor do texto principal */
-            margin: 0;
-            padding: 0;
-        }
+     /* ======== ESTILO GERAL DA PÁGINA ODS 3 ======== */
 
-        .titulo {
-            background-color: #4CAF50; 
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            margin: 0;
-            font-size: 36px;
-        }
- 
-        /* Container principal para centralizar o conteúdo */
-        #quadro-branco{
-            max-width: 75%;
-            max-height: 80%;
-            margin: 20px auto; /* Centraliza na página */
-            padding: 20px;
-            background-color: #ffffff; /* Fundo branco para o conteúdo */
-            box-shadow: 0px 0px 10px #4CAF50;
-            border-radius: 5px;
-            
-        }
+.page-ods3 {
+    font-family: Arial, sans-serif;   /* Fonte padrão da página */
+    line-height: 1.6;                 /* Altura das linhas (espaçamento do texto) */
+    background-color: #f4f4f4;        /* Cor de fundo clara */
+    color: #333;                      /* Cor padrão do texto */
+    margin: 0;                        /* Remove margens padrão da página */
+    padding: 0;                       /* Remove preenchimento padrão */
+}
 
-         div img{
-            width: 100%;
-            height: 400px;
-            display: block;
-            background-size: cover;
-            
-        }
-        /*.header{
-            position: fixed; 
-            top: 0;
-            left: 0px;
-            width: 100%;
-            height: 60px;
-            padding: 1rem clamp(1rem, 4vw, 2rem);     
-            background-color: rgb(20, 20, 20, 0.7);
-            color: #ffffff;
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-between ;
-            align-items: center;
-            z-index: 10;
-        }*/
-        .logo {
-            font-size: 3rem;
-            color: var(--text-color);
-            font-weight: 800;
-            cursor: pointer;
-            transition: 0.3s ease;
-        }
-        
-        .logo:hover{
-            transform: scale(1.1);
-        }
-        .logo span{
-            text-shadow: 0 0 25px var(--main-color);
-        }
-        .navbar {
-            display: flex;
-            width: 32%;
-            align-items: center;
-            gap: clamp(2rem, 2.5vw, 4rem); 
-            margin-left: auto;
-        }
-        .navbar a {
-            font-size: 1.7rem;
-            color: var(--text-color);
-            font-weight: 200;
-            transition: 0.7s ease;
-            border-bottom: 3px solid transparent;
-            text-decoration: none;
-        }
-        .navbar a:hover,
-        .navbar a.active {
-            color: var(--main-color);
-            border-bottom: 3px solid var(--main-color);
-        }
-        /* CONTÊINER DO DROPDOWN */
-        .recolher {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-        
-        /* BOTÃO "CONTEÚDO" */
-        .conteudo {
-            background: transparent;
-            border: none;
-            outline: none;
-            font-size: 1.7rem;
-            color: var(--text-color);
-            font-weight: 200;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            padding: 0; /* pra alinhar com os <a> */
-        }
-        
-        /* TIRA O ESTILO DE BOTÃO FEIO NO HOVER/FOCUS */
-        .conteudo:focus {
-            outline: none;
-        }
-        
-        /* DROPDOWN EM SI (OS LINKS INTERNOS) */
-        .recolher-content {
-            display: none;
-            position: absolute;
-            top: 100%;      /* abaixo do botão */
-            left: 0;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 0.75rem 1rem;
-            border-radius: 0.5rem;
-            min-width: 160px;
-            z-index: 20;
-        }
-        
-        /* LINKS DENTRO DO DROPDOWN */
-        .recolher-content a {
-            display: block;
-            font-size: 1.4rem;
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 0.3rem 0;
-            border-bottom: none; /* senão pega o estilo da navbar */
-        }
-        
-        /* HOVER DOS LINKS DO DROPDOWN */
-        .recolher-content a:hover {
-            color: var(--main-color);
-        }
-        
-        /* MOSTRAR DROPDOWN NO HOVER */
-        .recolher:hover .recolher-content {
-            display: block;
-        }
-        
-        /* OPCIONAL: DESTACAR O BOTÃO QUANDO ABERTO/HOVER */
-        .recolher:hover .conteudo {
-            color: var(--main-color);
-            border-bottom: 3px solid var(--main-color);
-        }
-        /* Cabeçalho */
-        /*header {
-            background-color: #4CAF50; /* Cor verde (associada à saúde e ODS 3) 
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        } */
+/* Título principal da ODS 3 (banner verde no topo) */
+.titulo {
+    background-color: #4CAF50;        /* Verde da ODS 3 */
+    color: #ffffff;                   /* Texto branco */
+    padding: 20px;                    /* Espaço interno */
+    text-align: center;               /* Centraliza o texto */
+    margin: 0;                        /* Remove margens externas */
+    font-size: 36px;                  /* Tamanho da fonte do título */
+}
 
-       /* header h1 {
-            margin: 0;
-            font-size: 36px;
-        }*/
-       /* nav a {
-            color: rgb(124, 124, 124);
-            text-align: center; 
-            text-decoration: none;
-            padding-right: 5px;
-        }*/
+/* ======== QUADRO BRANCO DO CONTEÚDO ======== */
+/* Caixa central onde fica o conteúdo da página */
 
+#quadro-branco{
+    max-width: 75%;                   /* Limita a largura a 75% da tela */
+    max-height: 80%;                  /* Altura máxima (controle de layout) */
+    margin: 20px auto;                /* Centraliza na horizontal */
+    padding: 20px;                    /* Espaço interno */
+    background-color: #ffffff;        /* Fundo branco */
+    box-shadow: 0px 0px 10px #4CAF50; /* Sombra verde ao redor da caixa */
+    border-radius: 5px;               /* Cantos levemente arredondados */
+}
 
-       /* nav {
-            text-align: center;
-            padding-top:16px;  
-        }*/
+/* Imagens dentro de divs (banner ou ilustrações) */
+div img{
+    width: 100%;                      /* Imagem ocupa toda a largura do container */
+    height: 400px;                    /* Altura fixa */
+    display: block;                   /* Remove espaço embaixo da imagem */
+    background-size: cover;           /* Garantir que preencha sem deformar */
+}
 
-        /*nav a:hover { 
-            font-size: 1.7rem;
-            color:#4CAF50;
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }*/
+/* ======== NAVBAR / DROPDOWN HERDADOS DO HEADER GLOBAL ======== */
+/* Aqui você reaproveita o mesmo estilo do menu do site */
 
-       .centralizar iframe {
-            display: block;
-            width: 45%;
-            height: 350px;
-            border-style: none;
-            margin:auto;
-            padding: 16px;
-            margin-top: 16px;
-            box-shadow: 0px 0px 10px #4CAF50;
-            border-radius:5px
+/* Logo (se for usada nessa página) */
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
 
-        }
-        
+.logo:hover{
+    transform: scale(1.1);            /* Animação: aumenta um pouco ao passar o mouse */
+}
 
-        /* Seções de Conteúdo */
-        section {
-            margin-bottom: 25px; /* Espaçamento entre as seções */
-        }
+.logo span{
+    text-shadow: 0 0 25px var(--main-color); /* Brilho na parte colorida do logo */
+}
 
-        h2 {
-            color: #4CAF50; /* Títulos de seção na cor verde */
-            border-bottom: 2px solid #eee; /* Linha sutil abaixo do título */
-            padding-bottom: 10px;
-        }
+/* Container principal dos links do menu */
+.navbar {
+    display: flex;                    
+    width: 32%;                       /* Espaço reservado pro menu */
+    align-items: center;
+    gap: clamp(2rem, 2.5vw, 4rem);    /* Espaçamento responsivo entre os links */
+    margin-left: auto;                /* Empurra o menu para a direita */
+}
 
-        /* Lista de metas */
-        ul {
-            padding-left: 20px;    
-        }
+/* Links da navbar */
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 200;
+    transition: 0.7s ease;            /* Animação suave */
+    border-bottom: 3px solid transparent; /* Linha invisível para facilitar o hover */
+    text-decoration: none;
+}
 
-        li {
-            margin-bottom: 5px; /* Espaçamento entre itens da lista */
-        }
+/* Estado de hover/ativo dos links */
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);         /* Muda a cor do texto */
+    border-bottom: 3px solid var(--main-color); /* Mostra a linha embaixo */
+}
 
-        #tabela table{
-            border: solid rgb(0, 0, 0);
-            border-width: 1px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        
-        #tabela table, th, td{
-            border: solid;
-            border-width: 1px;
-            border-collapse: collapse;
-            text-align: center;
-            padding: 5px;
-        }
+/* ======== DROPDOWN "CONTEÚDO" ======== */
 
-        /* Rodapé */
-        /*footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 12px;
-            color: #777;
-        }
+/* Contêiner do dropdown (envolve botão + lista) */
+.recolher {
+    position: relative;               /* Referência pro posicionamento do submenu */
+    display: flex;
+    align-items: center;
+}
 
-        footer a{
-            color:#777;
-            text-decoration: none;
-        }
-        footer a:hover{
-            font-size: 13px;
-            color: rgb(107, 168, 219);
-        }*/
+/* Botão de texto "Conteúdo" que abre o dropdown */
+.conteudo {
+    background: transparent;          /* Sem fundo diferente */
+    border: none;                     /* Sem borda */
+    outline: none;                    /* Remove borda de foco padrão */
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 200;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;                      /* Espaço entre o texto e o ícone */
+    padding: 0;                       /* Alinha com os outros links */
+}
+
+/* Tira o contorno azul feio quando botão recebe foco */
+.conteudo:focus {
+    outline: none;
+}
+
+/* Caixa flutuante que contém os links do dropdown */
+.recolher-content {
+    display: none;                    /* Começa escondida */
+    position: absolute;
+    top: 100%;                        /* Logo abaixo do botão "Conteúdo" */
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);   /* Fundo preto translúcido */
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    min-width: 160px;                 /* Largura mínima */
+    z-index: 20;                      /* Fica por cima de outros elementos */
+}
+
+/* Estilo dos links dentro do dropdown */
+.recolher-content a {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.3rem 0;
+    border-bottom: none;              /* Não usa underline do menu principal */
+}
+
+/* Hover nos links internos do dropdown */
+.recolher-content a:hover {
+    color: var(--main-color);         /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Mostra o dropdown quando o mouse está sobre o contêiner */
+.recolher:hover .recolher-content {
+    display: block;
+}
+
+/* Deixa o texto "Conteúdo" destacado quando o dropdown está aberto */
+.recolher:hover .conteudo {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+/* ======== CONTEÚDOS DA PÁGINA ======== */
+
+/* Centraliza o iframe do vídeo ou mapa */
+.centralizar iframe {
+    display: block;
+    width: 45%;                       /* Largura do iframe */
+    height: 350px;                    /* Altura do iframe */
+    border-style: none;               /* Remove borda padrão */
+    margin:auto;                      /* Centraliza horizontalmente */
+    padding: 16px;                    /* Espaço ao redor */
+    margin-top: 16px;
+    box-shadow: 0px 0px 10px #4CAF50; /* Sombra verde ao redor */
+    border-radius:5px;                /* Cantos arredondados */
+}
+
+/* Cada seção de texto da ODS 3 */
+section {
+    margin-bottom: 25px;              /* Espaço entre uma seção e outra */
+}
+
+/* Títulos internos (h2) */
+h2 {
+    color: #4CAF50;                   /* Verde da ODS 3 */
+    border-bottom: 2px solid #eee;    /* Linha abaixo do título */
+    padding-bottom: 10px;             /* Espaço entre texto e linha */
+}
+
+/* Listas de metas, indicadores etc. */
+ul {
+    padding-left: 20px;               /* Recuo padrão à esquerda */
+}
+
+li {
+    margin-bottom: 5px;               /* Espaço entre cada item */
+}
+
+/* Tabela de dados ou indicadores */
+#tabela table{
+    border: solid rgb(0, 0, 0);       /* Borda preta */
+    border-width: 1px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Células da tabela (th e td) */
+#tabela table, th, td{
+    border: solid;
+    border-width: 1px;
+    border-collapse: collapse;        /* Junta as bordas numa só */
+    text-align: center;
+    padding: 5px;                     /* Espaço interno em cada célula */
+}
